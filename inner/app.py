@@ -31,8 +31,6 @@ def get_answer(image, text):
         return str(e)
 
 # Set up the Streamlit app
-
- 
 st.title("VisualSense QA")
 st.write("Upload an image and enter a question to get an answer.")
 
@@ -44,6 +42,7 @@ with col1:
     uploaded_file = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
     if uploaded_file is not None:
         st.image(uploaded_file, use_column_width=True)
+
 # Question input
 with col2:
     question = st.text_input("Question")
